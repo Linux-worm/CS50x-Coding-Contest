@@ -6,18 +6,15 @@
 
 int main(void)
 {
-    // TODO
-   /* int F  //get_int();
-    int D = get_int(); */
     int F, D;
     scanf("%d\n",&F);
     scanf("%d\n",&D); 	
     int *E;
     bool flag = false;
     E = malloc(D * sizeof(int));
-    for(int i = 0; i < D - 1; i++)
+    for(int i = 0; i < D; i++)
         {
-        scanf("%d\n",&E[i]);
+        scanf("%d",&E[i]);
         }
         for(int i = 0; i < D; i++)
         {
@@ -29,8 +26,7 @@ int main(void)
 	else
 	{
 	   flag = true;
-	}
-	
+	}	
         F = F - E[i];
     }
     if(flag)
