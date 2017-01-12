@@ -10,7 +10,6 @@ int main(void)
     scanf("%d\n",&F);
     scanf("%d\n",&D); 	
     int *E;
-    bool flag = false;
     E = malloc(D * sizeof(int));
     for(int i = 0; i < D; i++)
         {
@@ -18,19 +17,14 @@ int main(void)
         }
         for(int i = 0; i < D; i++)
         {
-        if(F < E[i])
-	{
-           printf("%d",i);
-	   return 1;
-	}
-	else
-	{
-	   flag = true;
-	}	
-        F = F - E[i];
-    }
-    if(flag)
-      printf("Happy Cat!.");
+         F = F - E[i];
+         if(F <= 0)
+	 {
+            printf("%d",i);
+	    return 1;
+ 	 }
+         }
+    printf("Happy Cat!.");
         
 }
 
